@@ -6,8 +6,8 @@ export default function App(){
   return <>
     {/* <Hello/>
     <Bye/> */}
-    <Props name="Adam"/>
-    <Props name="Steve"/>
+    <Props name="Adam" email="adam@gamail.com"/>
+    <Props name="Steve" email="steve@gmail.com"/>
   </>
   
 }
