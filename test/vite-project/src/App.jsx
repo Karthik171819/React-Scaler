@@ -8,6 +8,7 @@ export default function App(){
     <Bye/> */}
     <Props name="Adam" email="adam@gamail.com"/>
     <Props name="Steve" email="steve@gmail.com"/>
+    <Props name="Hooper" email="hooper@gmail.com"/>
   </>
   
 }
