@@ -13,7 +13,7 @@
 export default function Props({name, email}){
     return(
         <>
-            <h1>Hi {name} Your mail id {email}...Thank You!</h1>
+            <h2>Hi {name} Your mail id {email}...Thank You!</h2>
            
         </>
     )
