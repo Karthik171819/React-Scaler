@@ -1,8 +1,8 @@
 import Fruit from "./RenderingArrayComponent";
 export default function Fruits(){
-    let fruits = [{name:"Apple", price:"100"},
-                  {name:"Orange", price:"80"},
-                  {name:"Mango", price:"70"},
+    let fruits = [{name:"Apple", price: 100},
+                  {name:"Orange", price: 80},
+                  {name:"Mango", price: 50},
                 ];
     return <div>
         <ol>
