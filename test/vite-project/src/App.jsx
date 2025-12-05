@@ -3,6 +3,7 @@ import Bye from "./components/Bye";
 import Props from "./components/Props";
 import ArrayProps from "./components/PropsArray";
 import Fruits from "./components/RenderingArray";
+import Message from "./StateEvents and Forms/EventHandling";
 
 export default function App(){
   //return <>
@@ -12,7 +13,8 @@ export default function App(){
   //return  <Props name="Steve" email="steve@gmail.com"/>
   //return  <Props name="Hooper" email="hooper@gmail.com"/>
   //return <ArrayProps/>
-  return <Fruits/>
+  //return <Fruits/>
+  return <Message/>
   
   
 }
