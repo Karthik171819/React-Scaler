@@ -4,6 +4,7 @@ import Props from "./components/Props";
 import ArrayProps from "./components/PropsArray";
 import Fruits from "./components/RenderingArray";
 import Message from "./StateEvents and Forms/EventHandling";
+import Counter from "./StateEvents and Forms/CounterState";
 
 export default function App(){
   //return <>
@@ -14,7 +15,8 @@ export default function App(){
   //return  <Props name="Hooper" email="hooper@gmail.com"/>
   //return <ArrayProps/>
   //return <Fruits/>
-  return <Message/>
+  //return <Message/>
+  return <Counter/>
   
   
 }
