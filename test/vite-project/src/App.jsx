@@ -6,6 +6,7 @@ import Fruits from "./components/RenderingArray";
 import Message from "./StateEvents and Forms/EventHandling";
 import Counter from "./StateEvents and Forms/CounterState";
 import MultipleEvent from "./StateEvents and Forms/MulitpleEvents";
+import Form from "./StateEvents and Forms/Forms";
 
 export default function App(){
   //return <>
@@ -18,7 +19,8 @@ export default function App(){
   //return <Fruits/>
   //return <Message/>
   //return <Counter/>
-  return <MultipleEvent/>
+  //return <MultipleEvent/>
+  return <Form/>
   
   
 }
