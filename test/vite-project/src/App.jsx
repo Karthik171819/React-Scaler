@@ -7,6 +7,7 @@ import Message from "./StateEvents and Forms/EventHandling";
 import Counter from "./StateEvents and Forms/CounterState";
 import MultipleEvent from "./StateEvents and Forms/MulitpleEvents";
 import Form from "./StateEvents and Forms/Forms";
+import Forms from "./StateEvents and Forms/MultipleInputEvent";
 
 export default function App(){
   //return <>
@@ -20,7 +21,8 @@ export default function App(){
   //return <Message/>
   //return <Counter/>
   //return <MultipleEvent/>
-  return <Form/>
+  //return <Form/>
+  return <Forms/>
   
   
 }
