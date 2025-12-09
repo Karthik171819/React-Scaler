@@ -1,11 +1,11 @@
 import Todo from "./Todo";
 
-export default function TodoContainer({todo}){
+export default function TodoContainer({todo, deleteTodo}){
     return(
         <div className="taskContainer">
              {todo.map((todo, index) => {
                 return(
-                    <Todo key={index} todo={todo}/>
+                    <Todo key={index} todo={todo} deleteTodo={deleteTodo}/>
                 )
 
              })}
