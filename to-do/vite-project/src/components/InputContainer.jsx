@@ -8,3 +8,4 @@ export default function InputContainer({inpVal, writeTodo, addTodo}) {
         </div>
     )
 }
+//input task field
