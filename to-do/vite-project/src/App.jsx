@@ -36,7 +36,7 @@ console.log(todo)
         {/* passing the props for input field */}
         <InputContainer inpVal={inpVal} writeTodo={writeTodo} addTodo={addTodo}/>
 
-        <TodoContainer todo={todo}/>
+        <TodoContainer todo={todo} deleteTodo={deleteTodo}/>
       </main>
   )
 }
