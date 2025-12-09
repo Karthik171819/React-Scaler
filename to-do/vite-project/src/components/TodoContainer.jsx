@@ -1,15 +1,14 @@
-export default function TodoContainer(){
+import Todo from "./Todo";
+
+export default function TodoContainer({todo}){
     return(
         <div className="taskContainer">
-              <div className="todo">
-                <p>Go to GYM Buddy</p>
+             {todo.map((todo, index) => {
+                return(
+                    <Todo key={index} todo={todo}/>
+                )
 
-                <div className="actions">
-                  <input type="checkbox"/>
-                  <button>Delete</button>
-                </div>
-
-              </div>
+             })}
         </div>
-    )
+    );
 }

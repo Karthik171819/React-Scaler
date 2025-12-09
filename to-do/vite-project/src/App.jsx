@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export default function App() {
 
-  const [inpVal, setInp] = useState('Enter a Task');
+  const [inpVal, setInp] = useState('');
   const [todo, setTodo] = useState([]);
 
   function writeTodo(e) {
@@ -15,17 +15,23 @@ export default function App() {
 
   //To add task list
   function addTodo(){
-    setTodo()
+    if(inpVal !==''){
+      setTodo((prevTodos) => [...prevTodos, inpVal]);
+      setInp('')
+    }
+    
   }
+
+console.log(todo)
 
   return(
       <main>
         <h1>To Do List</h1>
 
         {/* passing the props for input field */}
-        <InputContainer inpVal={inpuVal} writeTodo={writeTodo}/>
+        <InputContainer inpVal={inpVal} writeTodo={writeTodo} addTodo={addTodo}/>
 
-        <TodoContainer/>
+        <TodoContainer todo={todo}/>
       </main>
   )
 }
