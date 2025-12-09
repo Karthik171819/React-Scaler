@@ -3,8 +3,13 @@ import './App.css'
 
 export default function App() {
   return(
-    <div>
-      <h1>Todo List</h1>
-    </div>
+      <main>
+        <h1>To Do List</h1>
+
+        <div>
+          <input type="text"/>
+          <button>+</button>
+        </div>
+      </main>
   )
 }
