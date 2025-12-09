@@ -5,7 +5,7 @@ export default function TodoContainer({todo, deleteTodo}){
         <div className="taskContainer">
              {todo.map((todo, index) => {
                 return(
-                    <Todo key={index} todo={todo} deleteTodo={deleteTodo}/>
+                    <Todo key={index} index={index} todo={todo} deleteTodo={deleteTodo}/>
                 )
 
              })}
