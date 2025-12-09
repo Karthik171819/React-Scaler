@@ -22,6 +22,11 @@ export default function App() {
     
   }
 
+  //Delete Task
+  function deleteTodo(index){
+    setTodo((prevTodos) => prevTodos.filter((_, i) => i !== index));
+  }
+
 console.log(todo)
 
   return(
