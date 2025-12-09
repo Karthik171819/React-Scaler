@@ -6,10 +6,7 @@ export default function App() {
       <main>
         <h1>To Do List</h1>
 
-        <div className="input-container">
-          <input type="text" placeholder='Enter Task'/>
-          <button>+</button>
-        </div>
+        
 
         <div className="taskContainer">
               <div className="todo">
