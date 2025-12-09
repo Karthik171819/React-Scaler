@@ -6,7 +6,7 @@ export default function App() {
       <main>
         <h1>To Do List</h1>
 
-        <div>
+        <div className="input-container">
           <input type="text"/>
           <button>+</button>
         </div>
