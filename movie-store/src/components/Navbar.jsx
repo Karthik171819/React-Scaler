@@ -6,7 +6,7 @@ import Logo from "../MovieLogo.png"
 const Navbar = () => {
   return (
     <div>
-        <img src={Logo} alt=""/>
+        <img className='w-[50px]' src={Logo} alt=""/>
     </div>
   )
 }
