@@ -6,24 +6,18 @@ import WatchList from "./components/WatchList"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 export default function App(){
-  return(
+  return (
     <div>
       <BrowserRouter>
 
+        <Navbar />
 
-        <Navbar/>
-
-          <Routes>
-
-
-            <Movies/>
-
-            <WatchList/>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Movies />} />
+          <Route path="/watchlist" element={<WatchList />} />
+        </Routes>
         
       </BrowserRouter>
-
-      
     </div>
-  )
+  );
 }
