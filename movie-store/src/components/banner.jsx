@@ -2,7 +2,9 @@ import React from 'react'
 
 const banner = () => {
   return (
-    <div> my  this isbanner</div>
+    <div style={{backgroundImage: 'url(https://www.dneg.com/our-work/avengers-endgame)'}}> 
+
+    </div>
   )
 }
 
