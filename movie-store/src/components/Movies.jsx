@@ -8,7 +8,12 @@ const Movies = () => {
           Trending Movies
         </div>
 
-        <div>
+        <div className='flex flex-row flex-wrap justify-around'>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
+          <MovieCard/>
           <MovieCard/>
         </div>
     </div>
