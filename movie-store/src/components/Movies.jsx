@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieCart from './MovieCart'
+import MovieCard from './MovieCard'
 
 const Movies = () => {
   return (
@@ -9,7 +9,7 @@ const Movies = () => {
         </div>
 
         <div>
-          <MovieCart/>
+          <MovieCard/>
         </div>
     </div>
   )
