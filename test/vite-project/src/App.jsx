@@ -8,6 +8,7 @@ import Counter from "./StateEvents and Forms/CounterState";
 import MultipleEvent from "./StateEvents and Forms/MulitpleEvents";
 import Form from "./StateEvents and Forms/Forms";
 import Forms from "./StateEvents and Forms/MultipleInputEvent";
+import UseEffect from "./StateEvents and Forms/UseEffect";
 
 export default function App(){
   //return <>
@@ -22,7 +23,8 @@ export default function App(){
   //return <Counter/>
   //return <MultipleEvent/>
   //return <Form/>
-  return <Forms/>
+  //return <Forms/>
+  return <UseEffect/>
   
   
 }
