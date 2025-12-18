@@ -17,7 +17,7 @@ export default function UseEffect(){
     useEffect(() => {
         console.log("Use Effect runs");
         document.title = `button clicks ${count} times`
-    })
+    }, [count])
 
 
     return(
