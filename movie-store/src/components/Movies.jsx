@@ -9,7 +9,7 @@ const Movies = () => {
 
   //axios will handle the all https api
   useEffect(() =>{
-    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6849083db304fcea8fc082607b7f0d4f&language=en-US&page=2%27`)
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6849083db304fcea8fc082607b7f0d4f&language=en-US&page=5%27`)
     .then(function(res){
       console.log(res.data.results)
       setMovies(res.data.results)
@@ -22,7 +22,7 @@ const Movies = () => {
           Trending Movies
         </div>
 
-        <div className='flex flex-row flex-wrap justify-around'>
+        <div className='flex flex-row flex-wrap justify-around gap-5'>
           
           {movies.map((movieObj) =>{
             return <MovieCard poster_path={movieObj.poster_path} name={movieObj.original_title}/>
