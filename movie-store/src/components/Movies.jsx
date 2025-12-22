@@ -7,15 +7,28 @@ const Movies = () => {
 
   //to populate movies using state
   const [movies, setMovies] = useState([])
+  const [pageNo, setPageNo] = useState(1)
+
+  //pagination logic
+  const handlePrev =() =>{
+    if(pageNo==1){
+      setPageNo(1)
+    }
+    setPageNo(pageNo-1)
+  }
+
+  const handleNext =() =>{
+    setPageNo(pageNo+1)
+  }
 
   //axios will handle the all https api
   useEffect(() =>{
-    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6849083db304fcea8fc082607b7f0d4f&language=en-US&page=5%27`)
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6849083db304fcea8fc082607b7f0d4f&language=en-US&page=${pageNo}%27`)
     .then(function(res){
       console.log(res.data.results)
       setMovies(res.data.results)
     })
-  }, [])
+  }, [pageNo])
 
   return (
     <div>
@@ -30,7 +43,7 @@ const Movies = () => {
           })}
           
         </div>
-        <Pagination/>
+        <Pagination pageNo={pageNo} handlePrev={handlePrev} handleNext={handleNext}/>
     </div>
   )
 }
