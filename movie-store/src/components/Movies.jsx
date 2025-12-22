@@ -25,7 +25,7 @@ const Movies = () => {
         <div className='flex flex-row flex-wrap justify-around gap-5'>
           
           {movies.map((movieObj) =>{
-            return <MovieCard poster_path={movieObj.poster_path} name={movieObj.original_title}/>
+            return <MovieCard  key={movieObj.id} poster_path={movieObj.poster_path} name={movieObj.original_title}/>
           })}
           
         </div>
