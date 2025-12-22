@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 import axios from 'axios'
+import Pagination from './Pagination'
 
 const Movies = () => {
 
@@ -29,6 +30,7 @@ const Movies = () => {
           })}
           
         </div>
+        <Pagination/>
     </div>
   )
 }
