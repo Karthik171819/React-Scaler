@@ -1,13 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 import axios from 'axios'
 
 const Movies = () => {
 
+  //to populate movies using state
+  const [movies, setMovies] = useState([])
+
+  //axios will handle the all https api
   useEffect(() =>{
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=6849083db304fcea8fc082607b7f0d4f&language=en-US&page=2%27`)
     .then(function(res){
-      console.log(res.data.results)
+      setMovies(res.data.results)
     })
   }, [])
 
@@ -18,7 +22,10 @@ const Movies = () => {
         </div>
 
         <div className='flex flex-row flex-wrap justify-around'>
-          <MovieCard/>
+          
+          {movies.map((movieObj) =>{
+            return <MovieCard/>
+          })}
           
         </div>
     </div>
