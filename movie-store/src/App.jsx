@@ -8,7 +8,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { useState } from "react"
 
 export default function App(){
-
+  //its a global state for adding watchlist to access every component
   let [watchList, setWatchList] = useState([])
 
   let handleWatchList = (movieObj) => {

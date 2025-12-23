@@ -41,7 +41,7 @@ const Movies = ({handleWatchList}) => {
         <div className='flex flex-row flex-wrap justify-around gap-5'>
           
           {movies.map((movieObj) =>{
-            return <MovieCard  key={movieObj.id} poster_path={movieObj.poster_path} name={movieObj.original_title} handleWatchList={handleWatchList}/>
+            return <MovieCard  key={movieObj.id} movieObj={movieObj} poster_path={movieObj.poster_path} name={movieObj.original_title} handleWatchList={handleWatchList}/>
           })}
           
         </div>
