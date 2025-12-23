@@ -19,9 +19,9 @@ import React from 'react'
       }}>
 
         {doesContain(movieObj) ?
-          <button onClick={() => removeFromWatchList (movieObj)} className=' m-2 bg-red-600 text-white px-2 py-1 rounded-lg hover:bg-red-800 '>Remove</button>
+          <button onClick={() => removeFromWatchList (movieObj)} className=' m-2 bg-gray-900/60 text-white px-2 py-1 rounded-lg'>&#10060;</button>
         :
-          <button onClick={() => handleWatchList (movieObj)} className=' m-2 bg-green-600 text-white px-2 py-1 rounded-lg hover:bg-green-800 '>Add to Watchlist</button>
+          <button onClick={() => handleWatchList (movieObj)} className=' m-2 bg-gray-900/60 text-white px-2 py-1 rounded-lg'>&#128525;</button>
         }
          {/* Movie name overlay */}
         <div className=' absolute bottom-0 text-white text-sm bg-black/70 px-2 py-2 w-full  text-center bg-gray-900/60 '>
