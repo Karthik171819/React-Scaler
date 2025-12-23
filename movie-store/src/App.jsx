@@ -29,7 +29,7 @@ export default function App(){
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<> <Banner/> <Movies handleWatchList={handleWatchList} /></>} />
+          <Route path="/" element={<> <Banner/> <Movies handleWatchList={handleWatchList}  removeFromWatchList={removeFromWatchList}/></>} />
           <Route path="/watchlist" element={<WatchList />} />
         </Routes>
         
