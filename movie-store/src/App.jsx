@@ -23,7 +23,7 @@ export default function App(){
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<> <Banner/> <Movies /></>} />
+          <Route path="/" element={<> <Banner/> <Movies handleWatchList={handleWatchList} /></>} />
           <Route path="/watchlist" element={<WatchList />} />
         </Routes>
         
