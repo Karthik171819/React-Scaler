@@ -15,7 +15,13 @@ export default function App(){
     let newWatchList = [...watchList, movieObj]
     setWatchList(newWatchList)  
     console.log(watchList);
-  }
+
+    //Remove the watchlist 
+    let removeFromWatchList = (movieObj) => {
+      let filterWatchList = watchList.filter(movie => movie.id !== movieObj.id)
+      setWatchList(filterWatchList)
+    }
+
   return (
     <div>
       <BrowserRouter>
