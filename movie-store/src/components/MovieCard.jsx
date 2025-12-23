@@ -9,7 +9,7 @@ const MovieCard = ({poster_path, name}) => {
       }}>
 
         {/* emoji */}
-        <div className='absolute m-4 h-8 w-8 justify-center items-center rounded-lg'>
+        <div className=' m-4  justify-center items-center rounded-lg bg-gray-900/60'>
           &#128525;
         </div>
 
