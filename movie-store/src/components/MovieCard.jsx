@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MovieCard = ({poster_path, name}) => {
+const MovieCard = ({poster_path, name, handleWatchList}) => {
   return (
     // Movie card component to display movie poster and name
     <div  className='relative h-[40vh] w-[200px] bg-center bg-cover rounded-xl px-1 hover:scale-110 duration-300 hover:cursor-pointer flex flex-col justify-between items-end shadow-lg overflow-hidden ' 
