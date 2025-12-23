@@ -5,9 +5,10 @@ const WatchList = () => {
     <>
 
      <div className='flex justify-center flex-wrap m-4'>
-        <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5'>Action</div>
-        <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5'>All genre</div>
+        <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5'>All Genres</div>
         <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5'>Action</div>
+        <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5'>Crime</div>
+        <div className=' flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5'>Comedy</div>
      </div>
 
       <div className='flex justify-center'>
