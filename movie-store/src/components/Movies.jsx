@@ -3,7 +3,7 @@ import MovieCard from './MovieCard'
 import axios from 'axios'
 import Pagination from './Pagination'
 
-const Movies = () => {
+const Movies = ({handleWatchList}) => {
 
   //to populate movies using state
   const [movies, setMovies] = useState([])
@@ -41,7 +41,7 @@ const Movies = () => {
         <div className='flex flex-row flex-wrap justify-around gap-5'>
           
           {movies.map((movieObj) =>{
-            return <MovieCard  key={movieObj.id} poster_path={movieObj.poster_path} name={movieObj.original_title}/>
+            return <MovieCard  key={movieObj.id} poster_path={movieObj.poster_path} name={movieObj.original_title} handleWatchList={handleWatchList}/>
           })}
           
         </div>
