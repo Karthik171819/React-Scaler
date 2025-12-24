@@ -86,6 +86,7 @@ const WatchList = ({ watchList, setWatchList }) => {
                       </span>
                     </td>
 
+                    {/* fetching movie properties from api */}
                     <td>{movieObj.vote_average}</td>
                     <td>{movieObj.popularity}</td>
                     <td>{genreids[movieObj.genre_ids[0]]}</td>
