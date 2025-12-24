@@ -13,6 +13,8 @@ export default function App(){
 
   let handleWatchList = (movieObj) => {
     let newWatchList = [...watchList, movieObj]
+    //to store watchlist in local storage persists even after refreshing
+    localStorage.setItem("watchList", JSON.stringify(newWatchList))
     setWatchList(newWatchList)  
     console.log(watchList);
   }
