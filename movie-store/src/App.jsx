@@ -33,7 +33,7 @@ export default function App(){
 
         <Routes>
           <Route path="/" element={<> <Banner/> <Movies watchList={watchList} handleWatchList={handleWatchList}  removeFromWatchList={removeFromWatchList}/></>} />
-          <Route path="/watchlist" element={<WatchList />} />
+          <Route path="/watchlist" element={<WatchList  watchList={watchList}/>} />
         </Routes>
         
       </BrowserRouter>
