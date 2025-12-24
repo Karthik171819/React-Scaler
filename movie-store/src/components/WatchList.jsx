@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WatchList = () => {
+const WatchList = ({watchList}) => {
   return (
     <>
 
