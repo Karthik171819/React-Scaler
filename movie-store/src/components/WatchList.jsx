@@ -1,11 +1,27 @@
 import React, { useState } from "react";
 
-const WatchList = ({ watchList }) => {
+const WatchList = ({ watchList, setWatchList }) => {
   const [search, setSearch] = useState("");
 
+  //function to handle search input
   let handleSearch = (e) => {
     setSearch(e.target.value);
   };
+
+  //sorting the watchlist based on rating
+  let sortIncreasing = () =>{
+   let sortedIcrement=  watchList.sort((movieA, movieB) => {
+      return movieA.vote_average - movieB.vote_average
+    })
+    setWatchList([...sortedIcrement])  
+  }
+
+  let sortDecreasing = () =>{
+   let sortedDecreasing= watchList.sort((movieA, movieB) => {
+      return movieB.vote_average - movieA.vote_average
+    })
+    setWatchList([...sortedDecreasing])
+  }
   return (
     <>
       <div className="flex justify-center flex-wrap m-4">
@@ -39,12 +55,11 @@ const WatchList = ({ watchList }) => {
             <tr>
               <th>Name</th>
 
-              <div>
-                <div></div>
-                <th>Rating</th>
-                <div></div>
-              </div>
-
+              <th className='flex justify-center items-center'>
+                <div className="p-2" onClick={sortIncreasing}><i class="fa-solid fa-arrow-up"></i></div>
+                <div className="p-2">Rating</div>
+                <div className='p-2' onClick={sortDecreasing}><i class="fa-solid fa-arrow-down"></i></div>
+              </th>
               <th>Popularity</th>
               <th>Genre</th>
             </tr>
