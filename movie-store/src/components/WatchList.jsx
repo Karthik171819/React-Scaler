@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const WatchList = ({watchList}) => {
+
+  const [search, setSearch] = useState("")
+
+  let handleSearch=(e)=>{
+    setSearch(e.target.value)
+  }
   return (
     <>
 
@@ -12,7 +18,7 @@ const WatchList = ({watchList}) => {
      </div>
 
       <div className='flex justify-center'>
-        <input type="text" placeholder="Search Movie" className='border-2 border-gray-400 bg-gray-200 p-2 m-4 rounded-lg w-1/3 '/>
+        <input onChange={handleSearch} value={search} type="text" placeholder="Search Movie" className='border-2 border-gray-400 bg-gray-200 p-2 m-4 rounded-lg w-1/3 '/>
       </div>
 
       <div className=' overflow-hidden rounded-lg border border-gray-200 m-8'>
@@ -31,7 +37,9 @@ const WatchList = ({watchList}) => {
 
           <tbody>
 
-            {watchList.map((movieObj) => {
+            {watchList.filter((movieObj) => {
+              return movieObj.title.toLowerCase().includes(search.toLowerCase())  
+            }).map((movieObj) => {
               return  <tr className='border-b'>
               <td className='flex items-center px-6 py-4'>
                 <img className="w-20 h-20" src={`https://image.tmdb.org/t/p/original/${movieObj.poster_path}`} />
