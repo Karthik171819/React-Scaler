@@ -34,13 +34,13 @@ const WatchList = ({watchList}) => {
             {watchList.map((movieObj) => {
               return  <tr className='border-b'>
               <td className='flex items-center px-6 py-4'>
-                <img className="w-16 h-20" src={`https://image.tmdb.org/t/p/original/${movieObj.poster_path}`} />
+                <img className="w-20 h-20" src={`https://image.tmdb.org/t/p/original/${movieObj.poster_path}`} />
                 <span className='ml-6 font-semibold'>{movieObj.title}</span>
               </td>
 
-              <td>8.5</td>
-              <td>9</td>
-              <td>Action</td>
+              <td>{movieObj.vote_average}</td>
+              <td>{movieObj.popularity}</td>
+              <td>{movieObj.genre_ids}</td>
               <td className='text-red-600 hover:cursor-pointer'>Delete</td>
             </tr>
 
