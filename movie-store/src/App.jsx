@@ -5,7 +5,7 @@ import WatchList from "./components/WatchList"
 import Banner from "./components/Banner"
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function App(){
   //its a global state for adding watchlist to access every component
@@ -24,6 +24,15 @@ export default function App(){
       let filterWatchList = watchList.filter(movie => movie.id !== movieObj.id)
       setWatchList(filterWatchList)
     }
+
+    //useEffect to get the watchlist from local storage when the app loads
+    useEffect(() =>{
+      let moviesFromWatchList = localStorage.getItem("watchList")
+      if(!moviesFromWatchList){
+        return
+      }
+        setWatchList(JSON.parse(moviesFromWatchList))
+    }, [])
 
   
 
