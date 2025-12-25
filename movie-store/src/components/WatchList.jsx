@@ -30,7 +30,8 @@ const WatchList = ({ watchList, setWatchList }) => {
     let temp = watchList.map((movieObj) => {
       return genreids[movieObj.genre_ids[0]];
     });
-  })
+    setGenreFilter("all genres", ...temp)
+  }, [watchList]);
   return (
     <>
       <div className="flex justify-center flex-wrap m-4">
