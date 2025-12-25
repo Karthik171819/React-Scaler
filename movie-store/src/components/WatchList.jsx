@@ -3,6 +3,8 @@ import genreids from "../utility/genre";
 
 const WatchList = ({ watchList, setWatchList }) => {
   const [search, setSearch] = useState("");
+  //genre filter state
+  const[genreFilter, setGenreFilter] = useState("All Genres");
 
   //function to handle search input
   let handleSearch = (e) => {
@@ -23,6 +25,12 @@ const WatchList = ({ watchList, setWatchList }) => {
     })
     setWatchList([...sortedDecreasing])
   }
+
+  useEffect(() => {
+    let temp = watchList.map((movieObj) => {
+      return genreids[movieObj.genre_ids[0]];
+    });
+  })
   return (
     <>
       <div className="flex justify-center flex-wrap m-4">
