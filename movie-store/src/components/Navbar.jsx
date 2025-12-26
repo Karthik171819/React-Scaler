@@ -13,8 +13,10 @@ const Navbar = () => {
         <Link to="/"  className="text-blue-500 text-3xl font-bold" >Movies</Link>
 
         <Link to="/watchlist" className="text-blue-500 text-3xl font-bold " >WatchList</Link>
+        <h3 className='text-black bg-purple-400 p-1 rounded-xl'>Click on emoji to add movies in watch list</h3>
     </div>
   )
 }
+
 
 export default Navbar
