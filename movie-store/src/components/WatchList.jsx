@@ -77,7 +77,13 @@ const WatchList = ({ watchList, setWatchList }) => {
           </thead>
 
           <tbody>
-            {watchList
+            {watchList.filter((movieObj) =>{
+                if(currentGenre=="All Genres"){
+                  return true;
+                }else{
+                  return genreids[movieObj.genre_ids[0]]==currentGenre;
+                }
+            })
               .filter((movieObj) => {
                 return movieObj.title
                   .toLowerCase()
