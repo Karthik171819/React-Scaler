@@ -22,6 +22,7 @@ export default function App(){
     //Remove the watchlist 
     let removeFromWatchList = (movieObj) => {
       let filterWatchList = watchList.filter(movie => movie.id !== movieObj.id)
+      localStorage.setItem("watchList", JSON.stringify(filterWatchList))
       setWatchList(filterWatchList)
     }
 
