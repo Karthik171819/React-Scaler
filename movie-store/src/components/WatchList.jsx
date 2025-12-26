@@ -38,7 +38,7 @@ const WatchList = ({ watchList, setWatchList }) => {
       
     });
     temp = new Set(temp);
-    setGenreFilter(["all genres", ...temp])
+    setGenreFilter(["All Genres", ...temp])
   }, [watchList]);
   return (
     <>
