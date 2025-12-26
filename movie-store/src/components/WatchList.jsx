@@ -106,7 +106,7 @@ const WatchList = ({ watchList, setWatchList, removeFromWatchList }) => {
                     <td>{movieObj.vote_average}</td>
                     <td>{movieObj.popularity}</td>
                     <td>{genreids[movieObj.genre_ids[0]]}</td>
-                    <td className="text-red-600 hover:cursor-pointer">
+                    <td onClick={() => removeFromWatchList(movieObj)} className="text-red-600 hover:cursor-pointer">
                       Delete
                     </td>
                   </tr>
