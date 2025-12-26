@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import genreids from "../utility/genre";
 
 const WatchList = ({ watchList, setWatchList }) => {
   const [search, setSearch] = useState("");
   //genre filter state
-  const[genreFilter, setGenreFilter] = useState("All Genres");
+  const[genreFilter, setGenreFilter] = useState(["All Genres"]);
 
   //function to handle search input
   let handleSearch = (e) => {
@@ -30,22 +30,18 @@ const WatchList = ({ watchList, setWatchList }) => {
     let temp = watchList.map((movieObj) => {
       return genreids[movieObj.genre_ids[0]];
     });
-    setGenreFilter("all genres", ...temp)
+    setGenreFilter(["all genres", ...temp])
   }, [watchList]);
   return (
     <>
       <div className="flex justify-center flex-wrap m-4">
-        <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5">
-          All Genres
-        </div>
+        {genreFilter.map((genre) =>{
+         return <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5">
+          {genre }
+          </div>
+        })}
         <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5">
           Action
-        </div>
-        <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5">
-          Crime
-        </div>
-        <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5">
-          Comedy
         </div>
       </div>
 
