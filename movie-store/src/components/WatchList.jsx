@@ -5,11 +5,16 @@ const WatchList = ({ watchList, setWatchList }) => {
   const [search, setSearch] = useState("");
   //genre filter state
   const[genreFilter, setGenreFilter] = useState(["All Genres"]);
+  const[currentGenre, setCurrentGenre] = useState("All Genres");  
 
   //function to handle search input
   let handleSearch = (e) => {
     setSearch(e.target.value);
   };
+
+  //function to handle genre filter
+  let handleFilter = (genre) =>{
+    setCurrentGenre(genre); 
 
   //sorting the watchlist based on rating
   let sortIncreasing = () =>{
@@ -36,13 +41,15 @@ const WatchList = ({ watchList, setWatchList }) => {
     <>
       <div className="flex justify-center flex-wrap m-4">
         {genreFilter.map((genre) =>{
-         return <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5">
+         return <div  onClick={() =>handleFilter(genre)}className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-blue-400 mx-5">
           {genre }
           </div>
         })}
+
         <div className=" flex justify-center h-[3rem] w-[9rem] rounded-xl text-white font-bold items-center bg-gray-400 mx-5">
           Action
         </div>
+
       </div>
 
       <div className="flex justify-center">
