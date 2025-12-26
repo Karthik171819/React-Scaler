@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import genreids from "../utility/genre";
 
-const WatchList = ({ watchList, setWatchList }) => {
+const WatchList = ({ watchList, setWatchList, removeFromWatchList }) => {
   const [search, setSearch] = useState("");
   //genre filter state
   const[genreFilter, setGenreFilter] = useState(["All Genres"]);
