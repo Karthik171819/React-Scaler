@@ -1,7 +1,8 @@
 import React from 'react'
 import Parent from './Parent'
 
-function Family() {
+function Family({familyMessage}) {
+    console.log(familyMessage);
   return (
     <div className="family">
         <Parent/>
