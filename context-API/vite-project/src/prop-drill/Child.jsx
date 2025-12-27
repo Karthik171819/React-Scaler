@@ -2,12 +2,12 @@ import React from 'react'
 import GrandDaughter from './GrandDaughter'
 import GrandSon from './GrandSon'
 
-function Child() {
+function Child({familyMessage}) {
   return (
     <div className='children'>
-        <h1>Child</h1>
-        <GrandDaughter/>
-        <GrandSon/>
+        <h1>Child {familyMessage}</h1>
+        <GrandDaughter familyMessage={familyMessage}/>
+        <GrandSon familyMessage={familyMessage}/>
     </div>
   )
 }

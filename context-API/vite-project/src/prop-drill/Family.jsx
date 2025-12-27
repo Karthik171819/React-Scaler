@@ -5,7 +5,7 @@ function Family({familyMessage}) {
     console.log(familyMessage);
   return (
     <div className="family">
-        <Parent/>
+        <Parent familyMessage={familyMessage}/>
     </div>
   )
 }
