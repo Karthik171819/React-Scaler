@@ -1,9 +1,9 @@
 import React from 'react'
 
-function GrandSon({familyMessage}) {
+function GrandSon() {
   return (
     <div className='gson'>
-        <h3>GrandSon {familyMessage.familyName}</h3>
+        <h3>GrandSon </h3>
     </div>
   )
 }

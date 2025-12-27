@@ -1,9 +1,9 @@
 import React from 'react'
 
-function GrandDaughter({familyMessage}) {
+function GrandDaughter() {
   return (
     <div className='gdaughter'>
-        <h3>GrandDaughter {familyMessage.familyName}</h3>
+        <h3>GrandDaughter </h3>
     </div>
   )
 }

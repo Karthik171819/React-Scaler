@@ -9,7 +9,7 @@ function App() {
   }
   return (
     <>
-    <Family familyMessage={familyMessage}/>
+    <Family />
     </>
   );
 }
