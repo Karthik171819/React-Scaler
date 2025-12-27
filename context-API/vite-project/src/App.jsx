@@ -1,9 +1,10 @@
 import './App.css';
+import Family from './prop-drill/Family';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to the Vite React App!</h1>
+     return <Family/>
     </div>
   );
 }
