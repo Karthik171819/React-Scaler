@@ -5,7 +5,7 @@ function App() {
 
   //family message
   const familyMessage ={
-    familyName: "invicible";
+    familyName: "invicible"
   }
   return (
     <>
