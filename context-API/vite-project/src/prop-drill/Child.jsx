@@ -1,8 +1,13 @@
 import React from 'react'
+import GrandDaughter from './GrandDaughter'
+import GrandSon from './GrandSon'
 
 function Child() {
   return (
-    <div>Child</div>
+    <div>
+        <GrandDaughter/>
+        <GrandSon/>
+    </div>
   )
 }
 

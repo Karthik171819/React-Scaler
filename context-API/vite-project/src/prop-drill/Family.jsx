@@ -1,8 +1,11 @@
 import React from 'react'
+import Parent from './Parent'
 
 function Family() {
   return (
-    <div>Family</div>
+    <div className="family">
+        <Parent/>
+    </div>
   )
 }
 
