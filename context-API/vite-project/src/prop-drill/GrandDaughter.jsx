@@ -2,7 +2,9 @@ import React from 'react'
 
 function GrandDaughter() {
   return (
-    <div>GrandDaughter</div>
+    <div className='gdaughter'>
+        <h3>GrandDaughter</h3>
+    </div>
   )
 }
 

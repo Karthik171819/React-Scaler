@@ -4,7 +4,8 @@ import GrandSon from './GrandSon'
 
 function Child() {
   return (
-    <div>
+    <div className='children'>
+        <h1>Child</h1>
         <GrandDaughter/>
         <GrandSon/>
     </div>
