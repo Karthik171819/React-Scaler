@@ -1,5 +1,6 @@
 import React, { useState , useMemo } from 'react'
 
+//counter component
 function Counter() {
 	const [counterOne, setCounterOne] = useState(0)
 	const [counterTwo, setCounterTwo] = useState(0)
