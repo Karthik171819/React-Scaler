@@ -1,5 +1,6 @@
 import React from 'react'
 
+//title component
 function Title() {
     console.log("Title Component Rendered")
   return (
