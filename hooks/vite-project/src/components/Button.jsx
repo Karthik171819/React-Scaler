@@ -1,5 +1,6 @@
 import React from 'react'
 
+//button component
 function Button({ handleClick, children }) {
   console.log('Rendering button - ', children)
   return (
