@@ -2,7 +2,7 @@ import React, { useState , useCallback } from 'react'
 import Count from './Count'
 import Button from './Button'
 import Title from './Title'
-
+//parent component
 function Parent() {
 	const [age, setAge] = useState(25)
 	const [salary, setSalary] = useState(50000)
